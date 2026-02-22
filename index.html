@@ -8,11 +8,237 @@
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- css -->
+    <!-- daisy ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- daisy ui -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- font awesome -->
   </head>
   <body>
-    <div class="mx-auto max-w-7xl">
-      <h1>onex</h1>
-    </div>
+    <header>
+      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <h1 class="font-medium text-2xl mt-14">Job Application Tracker</h1>
+        <div class="view-card grid grid-cols-3 mt-10 gap-5">
+          <!-- cards -->
+          <div class="vcard-one p-3 bg-base-200 shadow-md">
+            <p class="font-medium">Total</p>
+            <h2 id="total" class="text-2xl text-black mt-1">0</h2>
+          </div>
+          <div class="vcard-one p-3 bg-base-200 shadow-md">
+            <p class="font-medium">Interview</p>
+            <h2 id="interview" class="text-2xl text-green-600 mt-1">0</h2>
+          </div>
+          <div class="vcard-one p-3 bg-base-200 shadow-md">
+            <p class="font-medium">Rejected</p>
+            <h2 id="rejected" class="text-2xl text-red-600 mt-1">0</h2>
+          </div>
+          <!-- cards -->
+        </div>
+      </div>
+      <hr class="lg:w-7xl md:w-5xl text-gray-300 mx-auto mt-7" />
+    </header>
+    <!-- .............................. -->
+    <!-- .............................. -->
+
+    <!-- .............................. -->
+    <!-- ............allcards.................. -->
+    <main class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mt-6">
+      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="class flex justify-between mt-3 pb-4">
+          <h2 class="font-semibold text-xl">Available Jobs</h2>
+          <h3>8 jobs</h3>
+        </div>
+        <div class="tabs flex gap-5">
+          <button onclick="toggleStyle('all-filter')" id="all-filter" class="btn btn-dash text-black">All</button>
+          <button id="interview-filter" class="btn btn-dash text-black">Interview</button>
+          <button id="reject-filter" class="btn btn-dash text-black">Rejected</button>
+        </div>
+      </div>
+
+      <section id="allcards">
+        <div
+          class="cardOne flex justify-between mb-10 bg-base-200 shadow-md p-5"
+        >
+          <div class="content">
+            <h3 class="text-xl font-semibold">Mobile First Corp</h3>
+            <p class="text-gray-400 mb-3">React Native Developer</p>
+            <p class="text-[15px] mb-3">
+              Remote • Full-time • $130,000 - $175,000
+            </p>
+            <p class="mb-3">NOT APPLIED</p>
+            <p class="mb-3">
+              Build cross-platform mobile applications using React Native. Work
+              on products used by millions of users worldwide.
+            </p>
+            <div class="btn-tab">
+              <button class="btn btn-outline btn-accent">INTERVIEW</button>
+              <button class="btn btn-outline btn-error">REJECTED</button>
+            </div>
+          </div>
+          <i class="fa-solid fa-trash"></i>
+        </div>
+        <div
+          class="cardTwo flex justify-between mb-10 bg-base-200 shadow-md p-5"
+        >
+          <div class="content">
+            <h3 class="text-xl font-semibold">Mobile First Corp</h3>
+            <p class="text-gray-400 mb-3">React Native Developer</p>
+            <p class="text-[15px] mb-3">
+              Remote • Full-time • $130,000 - $175,000
+            </p>
+            <p class="mb-3">NOT APPLIED</p>
+            <p class="mb-3">
+              Build cross-platform mobile applications using React Native. Work
+              on products used by millions of users worldwide.
+            </p>
+            <div class="btn-tab">
+              <button class="btn btn-outline btn-accent">INTERVIEW</button>
+              <button class="btn btn-outline btn-error">REJECTED</button>
+            </div>
+          </div>
+          <i class="fa-solid fa-trash"></i>
+        </div>
+        <div
+          class="cardThree flex justify-between mb-10 bg-base-200 shadow-md p-5"
+        >
+          <div class="content">
+            <h3 class="text-xl font-semibold">Mobile First Corp</h3>
+            <p class="text-gray-400 mb-3">React Native Developer</p>
+            <p class="text-[15px] mb-3">
+              Remote • Full-time • $130,000 - $175,000
+            </p>
+            <p class="mb-3">NOT APPLIED</p>
+            <p class="mb-3">
+              Build cross-platform mobile applications using React Native. Work
+              on products used by millions of users worldwide.
+            </p>
+            <div class="btn-tab">
+              <button class="btn btn-outline btn-accent">INTERVIEW</button>
+              <button class="btn btn-outline btn-error">REJECTED</button>
+            </div>
+          </div>
+          <i class="fa-solid fa-trash"></i>
+        </div>
+        <div
+          class="cardFour flex justify-between mb-10 bg-base-200 shadow-md p-5"
+        >
+          <div class="content">
+            <h3 class="text-xl font-semibold">Mobile First Corp</h3>
+            <p class="text-gray-400 mb-3">React Native Developer</p>
+            <p class="text-[15px] mb-3">
+              Remote • Full-time • $130,000 - $175,000
+            </p>
+            <p class="mb-3">NOT APPLIED</p>
+            <p class="mb-3">
+              Build cross-platform mobile applications using React Native. Work
+              on products used by millions of users worldwide.
+            </p>
+            <div class="btn-tab">
+              <button class="btn btn-outline btn-accent">INTERVIEW</button>
+              <button class="btn btn-outline btn-error">REJECTED</button>
+            </div>
+          </div>
+          <i class="fa-solid fa-trash"></i>
+        </div>
+        <div
+          class="cardFive flex justify-between mb-10 bg-base-200 shadow-md p-5"
+        >
+          <div class="content">
+            <h3 class="text-xl font-semibold">Mobile First Corp</h3>
+            <p class="text-gray-400 mb-3">React Native Developer</p>
+            <p class="text-[15px] mb-3">
+              Remote • Full-time • $130,000 - $175,000
+            </p>
+            <p class="mb-3">NOT APPLIED</p>
+            <p class="mb-3">
+              Build cross-platform mobile applications using React Native. Work
+              on products used by millions of users worldwide.
+            </p>
+            <div class="btn-tab">
+              <button class="btn btn-outline btn-accent">INTERVIEW</button>
+              <button class="btn btn-outline btn-error">REJECTED</button>
+            </div>
+          </div>
+          <i class="fa-solid fa-trash"></i>
+        </div>
+        <div
+          class="cardSix flex justify-between mb-10 bg-base-200 shadow-md p-5"
+        >
+          <div class="content">
+            <h3 class="text-xl font-semibold">Mobile First Corp</h3>
+            <p class="text-gray-400 mb-3">React Native Developer</p>
+            <p class="text-[15px] mb-3">
+              Remote • Full-time • $130,000 - $175,000
+            </p>
+            <p class="mb-3">NOT APPLIED</p>
+            <p class="mb-3">
+              Build cross-platform mobile applications using React Native. Work
+              on products used by millions of users worldwide.
+            </p>
+            <div class="btn-tab">
+              <button class="btn btn-outline btn-accent">INTERVIEW</button>
+              <button class="btn btn-outline btn-error">REJECTED</button>
+            </div>
+          </div>
+          <i class="fa-solid fa-trash"></i>
+        </div>
+        <div
+          class="cardSeven flex justify-between mb-10 bg-base-200 shadow-md p-5"
+        >
+          <div class="content">
+            <h3 class="text-xl font-semibold">Mobile First Corp</h3>
+            <p class="text-gray-400 mb-3">React Native Developer</p>
+            <p class="text-[15px] mb-3">
+              Remote • Full-time • $130,000 - $175,000
+            </p>
+            <p class="mb-3">NOT APPLIED</p>
+            <p class="mb-3">
+              Build cross-platform mobile applications using React Native. Work
+              on products used by millions of users worldwide.
+            </p>
+            <div class="btn-tab">
+              <button class="btn btn-outline btn-accent">INTERVIEW</button>
+              <button class="btn btn-outline btn-error">REJECTED</button>
+            </div>
+          </div>
+          <i class="fa-solid fa-trash"></i>
+        </div>
+        <div
+          class="cardEight flex justify-between mb-10 bg-base-200 shadow-md p-5"
+        >
+          <div class="content">
+            <h3 class="text-xl font-semibold">Mobile First Corp</h3>
+            <p class="text-gray-400 mb-3">React Native Developer</p>
+            <p class="text-[15px] mb-3">
+              Remote • Full-time • $130,000 - $175,000
+            </p>
+            <p class="mb-3">NOT APPLIED</p>
+            <p class="mb-3">
+              Build cross-platform mobile applications using React Native. Work
+              on products used by millions of users worldwide.
+            </p>
+            <div class="btn-tab">
+              <button class="btn btn-outline btn-accent">INTERVIEW</button>
+              <button class="btn btn-outline btn-error">REJECTED</button>
+            </div>
+          </div>
+          <i class="fa-solid fa-trash"></i>
+        </div>
+      </section>
+    </main>
+    <!-- ............allcards.................. -->
+    <!-- .............................. -->
     <script src="./js/script.js"></script>
   </body>
 </html>
