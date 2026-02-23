@@ -8,6 +8,8 @@ let currentStatus = "all";
 let total = document.getElementById("total");
 let interview = document.getElementById("interview");
 let rejected = document.getElementById("rejected");
+let delet = document.getElementById("hideBtn");
+let singleCard = document.getElementById("item");
 // catch all main three element
 
 // catch all details information cards
@@ -193,3 +195,9 @@ function renderReject() {
     filterSection.appendChild(div);
   }
 }
+
+// delet function
+
+delet.addEventListener("click", () => {
+  singleCard.classList.add("hide");
+});

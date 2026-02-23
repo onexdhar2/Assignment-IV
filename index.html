@@ -23,6 +23,7 @@
       referrerpolicy="no-referrer"
     />
     <!-- font awesome -->
+     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header>
@@ -58,7 +59,7 @@
           <button
             onclick="toggleStyle('all-filter')"
             id="all-filter"
-            class="btn btn-dash text-black bg-gray-300"
+            class="btn btn-dash text-black bg-gray-500"
           >
             All
           </button>
@@ -83,7 +84,7 @@
       <!-- filtered -->
       <section id="allcards">
         <!-- card 1 -->
-        <div
+        <div id="item"
           class="cardOne flex justify-between mb-10 bg-base-200 shadow-md p-5"
         >
           <div class="content">
@@ -104,10 +105,10 @@
               <button class="btn btn-outline rejectButton btn-error">REJECTED</button>
             </div>
           </div>
-          <i class="fa-solid fa-trash"></i>
+          <i class="fa-solid fa-trash delet" id="hideBtn"></i>
         </div>
         <!-- card 2 -->
-        <div
+        <div id="item"
           class="cardOne flex justify-between mb-10 bg-base-200 shadow-md p-5"
         >
           <div class="content">
@@ -130,7 +131,7 @@
               <button class="btn rejectButton btn-outline btn-error">REJECTED</button>
             </div>
           </div>
-          <i class="fa-solid fa-trash"></i>
+          <i class="fa-solid fa-trash" id="hideBtn"></i>
         </div>
         <!-- card 3 -->
         <div
@@ -156,7 +157,7 @@
               <button class="btn rejectButton btn-outline btn-error">REJECTED</button>
             </div>
           </div>
-          <i class="fa-solid fa-trash"></i>
+          <i class="fa-solid fa-trash" id="delet"></i>
         </div>
         <!-- card 4 -->
         <div
@@ -180,7 +181,7 @@
               <button class="btn rejectButton btn-outline btn-error">REJECTED</button>
             </div>
           </div>
-          <i class="fa-solid fa-trash"></i>
+          <i class="fa-solid fa-trash" id="delet"></i>
         </div>
         <!-- card 5 -->
         <div
@@ -205,7 +206,7 @@
               <button class="btn rejectButton btn-outline btn-error">REJECTED</button>
             </div>
           </div>
-          <i class="fa-solid fa-trash"></i>
+          <i class="fa-solid fa-trash" id="delet"></i>
         </div>
         <!-- card 6 -->
         <div
@@ -232,7 +233,7 @@
               <button class="btn rejectButton btn-outline btn-error">REJECTED</button>
             </div>
           </div>
-          <i class="fa-solid fa-trash"></i>
+          <i class="fa-solid fa-trash" id="delet"></i>
         </div>
         <!-- card 7 -->
         <div
@@ -257,7 +258,7 @@
               <button class="btn rejectButton btn-outline btn-error">REJECTED</button>
             </div>
           </div>
-          <i class="fa-solid fa-trash"></i>
+          <i class="fa-solid fa-trash" id="delet"></i>
         </div>
         <!-- card 8 -->
         <div
@@ -286,7 +287,7 @@
               <button class="btn rejectButton btn-outline btn-error">REJECTED</button>
             </div>
           </div>
-          <i class="fa-solid fa-trash"></i>
+          <i class="fa-solid fa-trash" id="delet"></i>
         </div>
       </section>
     </main>
