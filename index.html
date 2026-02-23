@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- css -->
-    <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- css -->
     <!-- daisy ui -->
@@ -48,189 +47,243 @@
       </div>
       <hr class="lg:w-7xl md:w-5xl text-gray-300 mx-auto mt-7" />
     </header>
-    <!-- .............................. -->
-    <!-- .............................. -->
-
-    <!-- .............................. -->
     <!-- ............allcards.................. -->
     <main class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mt-6">
-      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mb-10">
         <div class="class flex justify-between mt-3 pb-4">
           <h2 class="font-semibold text-xl">Available Jobs</h2>
           <h3>8 jobs</h3>
         </div>
         <div class="tabs flex gap-5">
-          <button onclick="toggleStyle('all-filter')" id="all-filter" class="btn btn-dash text-black">All</button>
-          <button id="interview-filter" class="btn btn-dash text-black">Interview</button>
-          <button id="reject-filter" class="btn btn-dash text-black">Rejected</button>
+          <button
+            onclick="toggleStyle('all-filter')"
+            id="all-filter"
+            class="btn btn-dash text-black bg-gray-300"
+          >
+            All
+          </button>
+          <button
+            onclick="toggleStyle('interview-filter')"
+            id="interview-filter"
+            class="btn btn-dash text-black bg-gray-300"
+          >
+            Interview
+          </button>
+          <button
+            onclick="toggleStyle('reject-filter')"
+            id="reject-filter"
+            class="btn btn-dash text-black bg-gray-300"
+          >
+            Rejected
+          </button>
         </div>
       </div>
-
+      <!-- filtered -->
+      <section id="filter-section" class="hidden"></section>
+      <!-- filtered -->
       <section id="allcards">
+        <!-- card 1 -->
         <div
           class="cardOne flex justify-between mb-10 bg-base-200 shadow-md p-5"
         >
           <div class="content">
-            <h3 class="text-xl font-semibold">Mobile First Corp</h3>
-            <p class="text-gray-400 mb-3">React Native Developer</p>
-            <p class="text-[15px] mb-3">
+            <h3 class="text-xl font-semibold companyName">Mobile First Corp</h3>
+            <p class="text-gray-400 mb-3 proffession">React Native Developer</p>
+            <p class="text-[15px] mb-3 jobDetais">
               Remote • Full-time • $130,000 - $175,000
             </p>
-            <p class="mb-3">NOT APPLIED</p>
-            <p class="mb-3">
+            <p class="mb-3 isApplied">NOT APPLIED</p>
+            <p class="mb-3 companyTitle">
               Build cross-platform mobile applications using React Native. Work
               on products used by millions of users worldwide.
             </p>
             <div class="btn-tab">
-              <button class="btn btn-outline btn-accent">INTERVIEW</button>
-              <button class="btn btn-outline btn-error">REJECTED</button>
+              <button class="btn interviewButton btn-outline btn-accent">
+                INTERVIEW
+              </button>
+              <button class="btn btn-outline rejectButton btn-error">REJECTED</button>
             </div>
           </div>
           <i class="fa-solid fa-trash"></i>
         </div>
+        <!-- card 2 -->
         <div
-          class="cardTwo flex justify-between mb-10 bg-base-200 shadow-md p-5"
+          class="cardOne flex justify-between mb-10 bg-base-200 shadow-md p-5"
         >
           <div class="content">
-            <h3 class="text-xl font-semibold">Mobile First Corp</h3>
-            <p class="text-gray-400 mb-3">React Native Developer</p>
-            <p class="text-[15px] mb-3">
-              Remote • Full-time • $130,000 - $175,000
+            <h3 class="text-xl font-semibold companyName">WebFlow Agency</h3>
+            <p class="text-gray-400 mb-3 proffession">
+              Web Designer & Developer
             </p>
-            <p class="mb-3">NOT APPLIED</p>
-            <p class="mb-3">
-              Build cross-platform mobile applications using React Native. Work
-              on products used by millions of users worldwide.
+            <p class="text-[15px] mb-3 jobDetais">
+              Los Angeles, CA • Part-time • $80,000 - $120,000
+            </p>
+            <p class="mb-3 isApplied">NOT APPLIED</p>
+            <p class="mb-3 companyTitle">
+              Create stunning web experiences for high-profile clients. Must
+              have portfolio and experience with modern web design trends.
             </p>
             <div class="btn-tab">
-              <button class="btn btn-outline btn-accent">INTERVIEW</button>
-              <button class="btn btn-outline btn-error">REJECTED</button>
+              <button class="btn interviewButton btn-outline btn-accent">
+                INTERVIEW
+              </button>
+              <button class="btn rejectButton btn-outline btn-error">REJECTED</button>
             </div>
           </div>
           <i class="fa-solid fa-trash"></i>
         </div>
+        <!-- card 3 -->
         <div
-          class="cardThree flex justify-between mb-10 bg-base-200 shadow-md p-5"
+          class="cardOne flex justify-between mb-10 bg-base-200 shadow-md p-5"
         >
           <div class="content">
-            <h3 class="text-xl font-semibold">Mobile First Corp</h3>
-            <p class="text-gray-400 mb-3">React Native Developer</p>
-            <p class="text-[15px] mb-3">
-              Remote • Full-time • $130,000 - $175,000
+            <h3 class="text-xl font-semibold companyName">DataViz Solutions</h3>
+            <p class="text-gray-400 mb-3 proffession">
+              Data Visualization Specialistr
             </p>
-            <p class="mb-3">NOT APPLIED</p>
-            <p class="mb-3">
-              Build cross-platform mobile applications using React Native. Work
-              on products used by millions of users worldwide.
+            <p class="text-[15px] mb-3 jobDetais">
+              Boston, MA • Full-time • $125,000 - $165,000
+            </p>
+            <p class="mb-3 isApplied">NOT APPLIED</p>
+            <p class="mb-3 companyTitle">
+              Transform complex data into compelling visualizations. Required
+              skills: D3.js, React, and strong analytical thinking.
             </p>
             <div class="btn-tab">
-              <button class="btn btn-outline btn-accent">INTERVIEW</button>
-              <button class="btn btn-outline btn-error">REJECTED</button>
+              <button class="btn interviewButton btn-outline btn-accent">
+                INTERVIEW
+              </button>
+              <button class="btn rejectButton btn-outline btn-error">REJECTED</button>
             </div>
           </div>
           <i class="fa-solid fa-trash"></i>
         </div>
+        <!-- card 4 -->
         <div
-          class="cardFour flex justify-between mb-10 bg-base-200 shadow-md p-5"
+          class="cardOne flex justify-between mb-10 bg-base-200 shadow-md p-5"
         >
           <div class="content">
-            <h3 class="text-xl font-semibold">Mobile First Corp</h3>
-            <p class="text-gray-400 mb-3">React Native Developer</p>
-            <p class="text-[15px] mb-3">
-              Remote • Full-time • $130,000 - $175,000
+            <h3 class="text-xl font-semibold companyName">CloudFirst Inc</h3>
+            <p class="text-gray-400 mb-3 proffession">Backend Developer</p>
+            <p class="text-[15px] mb-3 jobDetais">
+              Seattle, WA • Full-time • $140,000 - $190,000
             </p>
-            <p class="mb-3">NOT APPLIED</p>
-            <p class="mb-3">
-              Build cross-platform mobile applications using React Native. Work
-              on products used by millions of users worldwide.
+            <p class="mb-3 isApplied">NOT APPLIED</p>
+            <p class="mb-3 companyTitle">
+              Design and maintain scalable backend systems using Python and AWS.
+              Work with modern DevOps practices and cloud infrastructure.
             </p>
             <div class="btn-tab">
-              <button class="btn btn-outline btn-accent">INTERVIEW</button>
-              <button class="btn btn-outline btn-error">REJECTED</button>
+              <button class="btn interviewButton btn-outline btn-accent">
+                INTERVIEW
+              </button>
+              <button class="btn rejectButton btn-outline btn-error">REJECTED</button>
             </div>
           </div>
           <i class="fa-solid fa-trash"></i>
         </div>
+        <!-- card 5 -->
         <div
-          class="cardFive flex justify-between mb-10 bg-base-200 shadow-md p-5"
+          class="cardOne flex justify-between mb-10 bg-base-200 shadow-md p-5"
         >
           <div class="content">
-            <h3 class="text-xl font-semibold">Mobile First Corp</h3>
-            <p class="text-gray-400 mb-3">React Native Developer</p>
-            <p class="text-[15px] mb-3">
-              Remote • Full-time • $130,000 - $175,000
+            <h3 class="text-xl font-semibold companyName">Innovation Labs</h3>
+            <p class="text-gray-400 mb-3 proffession">UI/UX Engineer</p>
+            <p class="text-[15px] mb-3 jobDetais">
+              Austin, TX • Full-time • $110,000 - $150,000
             </p>
-            <p class="mb-3">NOT APPLIED</p>
-            <p class="mb-3">
-              Build cross-platform mobile applications using React Native. Work
-              on products used by millions of users worldwide.
+            <p class="mb-3 isApplied">NOT APPLIED</p>
+            <p class="mb-3 companyTitle">
+              Create beautiful and functional user interfaces for our suite of
+              products. Strong design skills and frontend development expertise
+              required.
             </p>
             <div class="btn-tab">
-              <button class="btn btn-outline btn-accent">INTERVIEW</button>
-              <button class="btn btn-outline btn-error">REJECTED</button>
+              <button class="btn interviewButton btn-outline btn-accent">
+                INTERVIEW
+              </button>
+              <button class="btn rejectButton btn-outline btn-error">REJECTED</button>
             </div>
           </div>
           <i class="fa-solid fa-trash"></i>
         </div>
+        <!-- card 6 -->
         <div
-          class="cardSix flex justify-between mb-10 bg-base-200 shadow-md p-5"
+          class="cardOne flex justify-between mb-10 bg-base-200 shadow-md p-5"
         >
           <div class="content">
-            <h3 class="text-xl font-semibold">Mobile First Corp</h3>
-            <p class="text-gray-400 mb-3">React Native Developer</p>
-            <p class="text-[15px] mb-3">
-              Remote • Full-time • $130,000 - $175,000
+            <h3 class="text-xl font-semibold companyName">
+              MegaCorp Solutions
+            </h3>
+            <p class="text-gray-400 mb-3 proffession">JavaScript Developer</p>
+            <p class="text-[15px] mb-3 jobDetais">
+              New York, NY • Full-time • $130,000 - $170,00
             </p>
-            <p class="mb-3">NOT APPLIED</p>
-            <p class="mb-3">
-              Build cross-platform mobile applications using React Native. Work
-              on products used by millions of users worldwide.
+            <p class="mb-3 isApplied">NOT APPLIED</p>
+            <p class="mb-3 companyTitle">
+              Build enterprise applications with JavaScript and modern
+              frameworks. We offer competitive compensation, health insurance,
+              and professional development opportunities.
             </p>
             <div class="btn-tab">
-              <button class="btn btn-outline btn-accent">INTERVIEW</button>
-              <button class="btn btn-outline btn-error">REJECTED</button>
+              <button class="btn interviewButton btn-outline btn-accent">
+                INTERVIEW
+              </button>
+              <button class="btn rejectButton btn-outline btn-error">REJECTED</button>
             </div>
           </div>
           <i class="fa-solid fa-trash"></i>
         </div>
+        <!-- card 7 -->
         <div
-          class="cardSeven flex justify-between mb-10 bg-base-200 shadow-md p-5"
+          class="cardOne flex justify-between mb-10 bg-base-200 shadow-md p-5"
         >
           <div class="content">
-            <h3 class="text-xl font-semibold">Mobile First Corp</h3>
-            <p class="text-gray-400 mb-3">React Native Developer</p>
-            <p class="text-[15px] mb-3">
-              Remote • Full-time • $130,000 - $175,000
+            <h3 class="text-xl font-semibold companyName">StartupXYZ</h3>
+            <p class="text-gray-400 mb-3 proffession">Full Stack Engineer</p>
+            <p class="text-[15px] mb-3 jobDetais">
+              Remote • Full-time • $120,000 - $160,000
             </p>
-            <p class="mb-3">NOT APPLIED</p>
-            <p class="mb-3">
-              Build cross-platform mobile applications using React Native. Work
-              on products used by millions of users worldwide.
+            <p class="mb-3 isApplied">NOT APPLIED</p>
+            <p class="mb-3 companyTitle">
+              Join our fast-growing startup and work on our core platform.
+              Experience with Node.js and React required. Great benefits and
+              equity package included.
             </p>
             <div class="btn-tab">
-              <button class="btn btn-outline btn-accent">INTERVIEW</button>
-              <button class="btn btn-outline btn-error">REJECTED</button>
+              <button class="btn interviewButton btn-outline btn-accent">
+                INTERVIEW
+              </button>
+              <button class="btn rejectButton btn-outline btn-error">REJECTED</button>
             </div>
           </div>
           <i class="fa-solid fa-trash"></i>
         </div>
+        <!-- card 8 -->
         <div
-          class="cardEight flex justify-between mb-10 bg-base-200 shadow-md p-5"
+          class="cardOne flex justify-between mb-10 bg-base-200 shadow-md p-5"
         >
           <div class="content">
-            <h3 class="text-xl font-semibold">Mobile First Corp</h3>
-            <p class="text-gray-400 mb-3">React Native Developer</p>
-            <p class="text-[15px] mb-3">
-              Remote • Full-time • $130,000 - $175,000
+            <h3 class="text-xl font-semibold companyName">
+              TechCorp Industries
+            </h3>
+            <p class="text-gray-400 mb-3 proffession">
+              Senior Frontend Developer
             </p>
-            <p class="mb-3">NOT APPLIED</p>
-            <p class="mb-3">
-              Build cross-platform mobile applications using React Native. Work
-              on products used by millions of users worldwide.
+            <p class="text-[15px] mb-3 jobDetais">
+              San Francisco, CA • Full-time • $130,000 - $175,000
+            </p>
+            <p class="mb-3 isApplied">NOT APPLIED</p>
+            <p class="mb-3 companyTitle">
+              We are looking for an experienced Frontend Developer to build
+              scalable web applications using React and TypeScript. You will
+              work with a talented team on cutting-edge projects.
             </p>
             <div class="btn-tab">
-              <button class="btn btn-outline btn-accent">INTERVIEW</button>
-              <button class="btn btn-outline btn-error">REJECTED</button>
+              <button class="btn interviewButton btn-outline btn-accent">
+                INTERVIEW
+              </button>
+              <button class="btn rejectButton btn-outline btn-error">REJECTED</button>
             </div>
           </div>
           <i class="fa-solid fa-trash"></i>
