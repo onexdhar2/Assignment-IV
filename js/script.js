@@ -163,4 +163,33 @@ function renderInterview() {
     filterSection.appendChild(div);
   }
 }
+function renderReject() {
+  filterSection.innerHTML = "";
+  for (let rejectPart of rejected2) {
+    console.log(rejectPart);
+    let div = document.createElement("div");
+    div.className =
+      "cardOne flex justify-between mb-10 bg-base-200 shadow-md p-5";
+    div.innerHTML = `
+<div class="content">
+            <h3 class="text-xl font-semibold companyName">${rejectPart.companyName}</h3>
+            <p class="text-gray-400 mb-3 proffession">${rejectPart.proffession}React Native Developer</p>
+            <p class="text-[15px] mb-3 jobDetais">${rejectPart.jobDetais}
+              Remote • Full-time • $130,000 - $175,000
+            </p>
+            <p class="mb-3 isApplied">${rejectPart.isApplied}</p>
+            <p class="mb-3 companyTitle">${rejectPart.companyTitle}
+              Build cross-platform mobile applications using React Native. Work
+              on products used by millions of users worldwide.
+            </p>
+            <div class="btn-tab">
+              <button class="btn btn-outline btn-accent">INTERVIEW</button>
+              <button class="btn btn-outline btn-error">REJECTED</button>
+            </div>
+          </div>
+          <i class="fa-solid fa-trash"></i>
 
+    `;
+    filterSection.appendChild(div);
+  }
+}
