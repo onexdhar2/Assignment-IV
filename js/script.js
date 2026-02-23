@@ -8,8 +8,6 @@ let currentStatus = "all";
 let total = document.getElementById("total");
 let interview = document.getElementById("interview");
 let rejected = document.getElementById("rejected");
-let delet = document.getElementById("hideBtn");
-let singleCard = document.getElementById("item");
 // catch all main three element
 
 // catch all details information cards
@@ -197,7 +195,50 @@ function renderReject() {
 }
 
 // delet function
+let delet1 = document.getElementById("hideBtn1");
+let singleCard1 = document.getElementById("item1");
 
-delet.addEventListener("click", () => {
-  singleCard.classList.add("hide");
+let delet2 = document.getElementById("hideBtn2");
+let singleCard2 = document.getElementById("item2");
+
+let delet3= document.getElementById("hideBtn3");
+let singleCard3= document.getElementById("item3");
+
+let delet4= document.getElementById("hideBtn4");
+let singleCard4= document.getElementById("item4");
+
+let delet5= document.getElementById("hideBtn5");
+let singleCard5= document.getElementById("item5");
+
+let delet6= document.getElementById("hideBtn6");
+let singleCard6= document.getElementById("item6");
+
+let delet7 = document.getElementById("hideBtn7");
+let singleCard7 = document.getElementById("item7");
+
+let delet8 = document.getElementById("hideBtn8");
+let singleCard8 = document.getElementById("item8");
+delet1.addEventListener("click", () => {
+  singleCard1.classList.add("hide");
+});
+delet2.addEventListener("click", () => {
+  singleCard2.classList.add("hide");
+});
+delet3.addEventListener("click", () => {
+  singleCard3.classList.add("hide");
+});
+delet4.addEventListener("click", () => {
+  singleCard4.classList.add("hide");
+});
+delet5.addEventListener("click", () => {
+  singleCard5.classList.add("hide");
+});
+delet6.addEventListener("click", () => {
+  singleCard6.classList.add("hide");
+});
+delet7.addEventListener("click", () => {
+  singleCard7.classList.add("hide");
+});
+delet8.addEventListener("click", () => {
+  singleCard8.classList.add("hide");
 });
