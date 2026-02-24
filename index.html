@@ -23,7 +23,7 @@
       referrerpolicy="no-referrer"
     />
     <!-- font awesome -->
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
@@ -70,6 +70,7 @@
           >
             Interview
           </button>
+
           <button
             onclick="toggleStyle('reject-filter')"
             id="reject-filter"
@@ -84,7 +85,8 @@
       <!-- filtered -->
       <section id="allcards">
         <!-- card 1 -->
-        <div id="item1"
+        <div
+          id="item1"
           class="cardOne flex justify-between mb-10 bg-base-200 shadow-md p-5"
         >
           <div class="content">
@@ -93,22 +95,30 @@
             <p class="text-[15px] mb-3 jobDetais">
               Remote • Full-time • $130,000 - $175,000
             </p>
-            <p class="mb-3 isApplied">NOT APPLIED</p>
+            <button class="btn btn-outline btn-secondary isApplied mb-3">
+              NOT APPLIED
+            </button>
             <p class="mb-3 companyTitle">
               Build cross-platform mobile applications using React Native. Work
               on products used by millions of users worldwide.
             </p>
             <div class="btn-tab">
-              <button class="btn interviewButton btn-outline btn-accent">
+              <button
+                class="btn interviewButton btn-outline btn-accent"
+                id="interviewBtn"
+              >
                 INTERVIEW
               </button>
-              <button class="btn btn-outline rejectButton btn-error">REJECTED</button>
+              <button class="btn btn-outline rejectButton btn-error">
+                REJECTED
+              </button>
             </div>
           </div>
           <i class="fa-solid fa-trash delet" id="hideBtn1"></i>
         </div>
         <!-- card 2 -->
-        <div id="item2"
+        <div
+          id="item2"
           class="cardOne flex justify-between mb-10 bg-base-200 shadow-md p-5"
         >
           <div class="content">
@@ -119,7 +129,9 @@
             <p class="text-[15px] mb-3 jobDetais">
               Los Angeles, CA • Part-time • $80,000 - $120,000
             </p>
-            <p class="mb-3 isApplied">NOT APPLIED</p>
+            <button class="btn btn-outline btn-secondary isApplied mb-3">
+              NOT APPLIED
+            </button>
             <p class="mb-3 companyTitle">
               Create stunning web experiences for high-profile clients. Must
               have portfolio and experience with modern web design trends.
@@ -128,13 +140,16 @@
               <button class="btn interviewButton btn-outline btn-accent">
                 INTERVIEW
               </button>
-              <button class="btn rejectButton btn-outline btn-error">REJECTED</button>
+              <button class="btn rejectButton btn-outline btn-error">
+                REJECTED
+              </button>
             </div>
           </div>
           <i class="fa-solid fa-trash" id="hideBtn2"></i>
         </div>
         <!-- card 3 -->
-        <div id="item3"
+        <div
+          id="item3"
           class="cardOne flex justify-between mb-10 bg-base-200 shadow-md p-5"
         >
           <div class="content">
@@ -145,7 +160,9 @@
             <p class="text-[15px] mb-3 jobDetais">
               Boston, MA • Full-time • $125,000 - $165,000
             </p>
-            <p class="mb-3 isApplied">NOT APPLIED</p>
+            <button class="btn btn-outline btn-secondary isApplied mb-3">
+              NOT APPLIED
+            </button>
             <p class="mb-3 companyTitle">
               Transform complex data into compelling visualizations. Required
               skills: D3.js, React, and strong analytical thinking.
@@ -154,13 +171,16 @@
               <button class="btn interviewButton btn-outline btn-accent">
                 INTERVIEW
               </button>
-              <button class="btn rejectButton btn-outline btn-error">REJECTED</button>
+              <button class="btn rejectButton btn-outline btn-error">
+                REJECTED
+              </button>
             </div>
           </div>
           <i class="fa-solid fa-trash" id="hideBtn3"></i>
         </div>
         <!-- card 4 -->
-        <div id="item4"
+        <div
+          id="item4"
           class="cardOne flex justify-between mb-10 bg-base-200 shadow-md p-5"
         >
           <div class="content">
@@ -169,7 +189,9 @@
             <p class="text-[15px] mb-3 jobDetais">
               Seattle, WA • Full-time • $140,000 - $190,000
             </p>
-            <p class="mb-3 isApplied">NOT APPLIED</p>
+            <button class="btn btn-outline btn-secondary isApplied mb-3">
+              NOT APPLIED
+            </button>
             <p class="mb-3 companyTitle">
               Design and maintain scalable backend systems using Python and AWS.
               Work with modern DevOps practices and cloud infrastructure.
@@ -178,13 +200,16 @@
               <button class="btn interviewButton btn-outline btn-accent">
                 INTERVIEW
               </button>
-              <button class="btn rejectButton btn-outline btn-error">REJECTED</button>
+              <button class="btn rejectButton btn-outline btn-error">
+                REJECTED
+              </button>
             </div>
           </div>
           <i class="fa-solid fa-trash" id="hideBtn4"></i>
         </div>
         <!-- card 5 -->
-        <div id="item5"
+        <div
+          id="item5"
           class="cardOne flex justify-between mb-10 bg-base-200 shadow-md p-5"
         >
           <div class="content">
@@ -193,7 +218,9 @@
             <p class="text-[15px] mb-3 jobDetais">
               Austin, TX • Full-time • $110,000 - $150,000
             </p>
-            <p class="mb-3 isApplied">NOT APPLIED</p>
+            <button class="btn btn-outline btn-secondary isApplied mb-3">
+              NOT APPLIED
+            </button>
             <p class="mb-3 companyTitle">
               Create beautiful and functional user interfaces for our suite of
               products. Strong design skills and frontend development expertise
@@ -203,13 +230,16 @@
               <button class="btn interviewButton btn-outline btn-accent">
                 INTERVIEW
               </button>
-              <button class="btn rejectButton btn-outline btn-error">REJECTED</button>
+              <button class="btn rejectButton btn-outline btn-error">
+                REJECTED
+              </button>
             </div>
           </div>
           <i class="fa-solid fa-trash" id="hideBtn5"></i>
         </div>
         <!-- card 6 -->
-        <div id="item6"
+        <div
+          id="item6"
           class="cardOne flex justify-between mb-10 bg-base-200 shadow-md p-5"
         >
           <div class="content">
@@ -220,7 +250,9 @@
             <p class="text-[15px] mb-3 jobDetais">
               New York, NY • Full-time • $130,000 - $170,00
             </p>
-            <p class="mb-3 isApplied">NOT APPLIED</p>
+            <button class="btn btn-outline btn-secondary isApplied mb-3">
+              NOT APPLIED
+            </button>
             <p class="mb-3 companyTitle">
               Build enterprise applications with JavaScript and modern
               frameworks. We offer competitive compensation, health insurance,
@@ -230,13 +262,16 @@
               <button class="btn interviewButton btn-outline btn-accent">
                 INTERVIEW
               </button>
-              <button class="btn rejectButton btn-outline btn-error">REJECTED</button>
+              <button class="btn rejectButton btn-outline btn-error">
+                REJECTED
+              </button>
             </div>
           </div>
           <i class="fa-solid fa-trash" id="hideBtn6"></i>
         </div>
         <!-- card 7 -->
-        <div id="item7"
+        <div
+          id="item7"
           class="cardOne flex justify-between mb-10 bg-base-200 shadow-md p-5"
         >
           <div class="content">
@@ -245,7 +280,9 @@
             <p class="text-[15px] mb-3 jobDetais">
               Remote • Full-time • $120,000 - $160,000
             </p>
-            <p class="mb-3 isApplied">NOT APPLIED</p>
+            <button class="btn btn-outline btn-secondary isApplied mb-3">
+              NOT APPLIED
+            </button>
             <p class="mb-3 companyTitle">
               Join our fast-growing startup and work on our core platform.
               Experience with Node.js and React required. Great benefits and
@@ -255,13 +292,16 @@
               <button class="btn interviewButton btn-outline btn-accent">
                 INTERVIEW
               </button>
-              <button class="btn rejectButton btn-outline btn-error">REJECTED</button>
+              <button class="btn rejectButton btn-outline btn-error">
+                REJECTED
+              </button>
             </div>
           </div>
           <i class="fa-solid fa-trash" id="hideBtn7"></i>
         </div>
         <!-- card 8 -->
-        <div id="item8"
+        <div
+          id="item8"
           class="cardOne flex justify-between mb-10 bg-base-200 shadow-md p-5"
         >
           <div class="content">
@@ -274,7 +314,9 @@
             <p class="text-[15px] mb-3 jobDetais">
               San Francisco, CA • Full-time • $130,000 - $175,000
             </p>
-            <p class="mb-3 isApplied">NOT APPLIED</p>
+            <button class="btn btn-outline btn-secondary isApplied mb-3">
+              NOT APPLIED
+            </button>
             <p class="mb-3 companyTitle">
               We are looking for an experienced Frontend Developer to build
               scalable web applications using React and TypeScript. You will
@@ -284,12 +326,20 @@
               <button class="btn interviewButton btn-outline btn-accent">
                 INTERVIEW
               </button>
-              <button class="btn rejectButton btn-outline btn-error">REJECTED</button>
+              <button class="btn rejectButton btn-outline btn-error">
+                REJECTED
+              </button>
             </div>
           </div>
           <i class="fa-solid fa-trash" id="hideBtn8"></i>
         </div>
       </section>
+      <!-- NO JOBS -->
+      <div class="text-center pt-28 pb-28 hide" id="noJob">
+        <img class="mx-auto" src="./img/No JObs.png" alt="" />
+        <h1 class="text-2xl">No jobs available</h1>
+        <h2 class="text-xl">Check back soon for new job opportunities</h2>
+      </div>
     </main>
     <!-- ............allcards.................. -->
     <!-- .............................. -->

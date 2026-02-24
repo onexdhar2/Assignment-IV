@@ -8,6 +8,7 @@ let currentStatus = "all";
 let total = document.getElementById("total");
 let interview = document.getElementById("interview");
 let rejected = document.getElementById("rejected");
+let noJob = document.getElementById("noJob");
 // catch all main three element
 
 // catch all details information cards
@@ -20,6 +21,7 @@ const filterSection = document.getElementById("filter-section");
 const allFilter = document.getElementById("all-filter");
 const interviewFilter = document.getElementById("interview-filter");
 const rejectFilter = document.getElementById("reject-filter");
+
 // catch all three sub element to filter
 
 // all informations show a number in All Element
@@ -50,6 +52,7 @@ function toggleStyle(id) {
   if (id == "interview-filter") {
     filterSection.classList.remove("hidden");
     allcards.classList.add("hidden");
+    noJob.classList.remove("hide");
     renderInterview();
   } else if (id == "all-filter") {
     allcards.classList.remove("hidden");
@@ -57,6 +60,7 @@ function toggleStyle(id) {
   } else if (id == "reject-filter") {
     allcards.classList.add("hidden");
     filterSection.classList.remove("hidden");
+    noJob.classList.remove("hide");
     renderReject();
   }
 }
@@ -141,26 +145,33 @@ function renderInterview() {
     div.className =
       "cardOne flex justify-between mb-10 bg-base-200 shadow-md p-5";
     div.innerHTML = `
-<div class="content">
-            <h3 class="text-xl font-semibold companyName">${interviewPart.companyName}</h3>
-            <p class="text-gray-400 mb-3 proffession">${interviewPart.proffession}React Native Developer</p>
-            <p class="text-[15px] mb-3 jobDetais">${interviewPart.jobDetais}
-              Remote • Full-time • $130,000 - $175,000
-            </p>
-            <p class="mb-3 isApplied">${interviewPart.isApplied}</p>
-            <p class="mb-3 companyTitle">${interviewPart.companyTitle}
-              Build cross-platform mobile applications using React Native. Work
-              on products used by millions of users worldwide.
-            </p>
-            <div class="btn-tab">
-              <button class="btn btn-outline btn-accent">INTERVIEW</button>
-              <button class="btn btn-outline btn-error">REJECTED</button>
-            </div>
-          </div>
-          <i class="fa-solid fa-trash"></i>
-
+    <div class="content">
+    <h3 class="text-xl font-semibold companyName">${interviewPart.companyName}</h3>
+    <p class="text-gray-400 mb-3 proffession">${interviewPart.proffession}React Native Developer</p>
+    <p class="text-[15px] mb-3 jobDetais">${interviewPart.jobDetais}
+    Remote • Full-time • $130,000 - $175,000
+    </p>
+    <p class="mb-3 isApplied">${interviewPart.isApplied}</p>
+    <p class="mb-3 companyTitle">${interviewPart.companyTitle}
+    Build cross-platform mobile applications using React Native. Work
+    on products used by millions of users worldwide.
+    </p>
+    <div class="btn-tab">
+    <button class="btn interviewButton btn-outline btn-accent">INTERVIEW</button>
+    <button class="btn rejectButton btn-outline btn-error">REJECTED</button>
+    </div>
+    </div>
+    <i class="fa-solid fa-trash"></i>
+    
     `;
     filterSection.appendChild(div);
+    if (interview2.length !== 0) {
+      if (!noJob.classList.contains("hidden")) {
+        noJob.classList.add("hidden");
+      }
+    } else {
+      noJob.classList.remove("hidden");
+    }
   }
 }
 function renderReject() {
@@ -171,26 +182,33 @@ function renderReject() {
     div.className =
       "cardOne flex justify-between mb-10 bg-base-200 shadow-md p-5";
     div.innerHTML = `
-<div class="content">
-            <h3 class="text-xl font-semibold companyName">${rejectPart.companyName}</h3>
-            <p class="text-gray-400 mb-3 proffession">${rejectPart.proffession}React Native Developer</p>
-            <p class="text-[15px] mb-3 jobDetais">${rejectPart.jobDetais}
-              Remote • Full-time • $130,000 - $175,000
-            </p>
-            <p class="mb-3 isApplied">${rejectPart.isApplied}</p>
-            <p class="mb-3 companyTitle">${rejectPart.companyTitle}
-              Build cross-platform mobile applications using React Native. Work
-              on products used by millions of users worldwide.
-            </p>
-            <div class="btn-tab">
-              <button class="btn btn-outline btn-accent">INTERVIEW</button>
-              <button class="btn btn-outline btn-error">REJECTED</button>
-            </div>
-          </div>
-          <i class="fa-solid fa-trash"></i>
-
+    <div class="content">
+    <h3 class="text-xl font-semibold companyName">${rejectPart.companyName}</h3>
+    <p class="text-gray-400 mb-3 proffession">${rejectPart.proffession}React Native Developer</p>
+    <p class="text-[15px] mb-3 jobDetais">${rejectPart.jobDetais}
+    Remote • Full-time • $130,000 - $175,000
+    </p>
+    <p class="mb-3 isApplied">${rejectPart.isApplied}</p>
+    <p class="mb-3 companyTitle">${rejectPart.companyTitle}
+    Build cross-platform mobile applications using React Native. Work
+    on products used by millions of users worldwide.
+    </p>
+    <div class="btn-tab">
+    <button class="btn interviewButton btn-outline btn-accent">INTERVIEW</button>
+    <button class="btn rejectButton btn-outline btn-error">REJECTED</button>
+    </div>
+    </div>
+    <i class="fa-solid fa-trash"></i>
+    
     `;
     filterSection.appendChild(div);
+    if (rejected2.length !== 0) {
+      if (!noJob.classList.contains("hidden")) {
+        noJob.classList.add("hidden");
+      }
+    } else {
+      noJob.classList.remove("hidden");
+    }
   }
 }
 
@@ -201,17 +219,17 @@ let singleCard1 = document.getElementById("item1");
 let delet2 = document.getElementById("hideBtn2");
 let singleCard2 = document.getElementById("item2");
 
-let delet3= document.getElementById("hideBtn3");
-let singleCard3= document.getElementById("item3");
+let delet3 = document.getElementById("hideBtn3");
+let singleCard3 = document.getElementById("item3");
 
-let delet4= document.getElementById("hideBtn4");
-let singleCard4= document.getElementById("item4");
+let delet4 = document.getElementById("hideBtn4");
+let singleCard4 = document.getElementById("item4");
 
-let delet5= document.getElementById("hideBtn5");
-let singleCard5= document.getElementById("item5");
+let delet5 = document.getElementById("hideBtn5");
+let singleCard5 = document.getElementById("item5");
 
-let delet6= document.getElementById("hideBtn6");
-let singleCard6= document.getElementById("item6");
+let delet6 = document.getElementById("hideBtn6");
+let singleCard6 = document.getElementById("item6");
 
 let delet7 = document.getElementById("hideBtn7");
 let singleCard7 = document.getElementById("item7");
@@ -220,25 +238,38 @@ let delet8 = document.getElementById("hideBtn8");
 let singleCard8 = document.getElementById("item8");
 delet1.addEventListener("click", () => {
   singleCard1.classList.add("hide");
+  total.innerHTML = allcards.children.length - 1;
 });
 delet2.addEventListener("click", () => {
   singleCard2.classList.add("hide");
+  total.innerHTML = allcards.children.length--;
+  total.innerHTML = allcards.children.length - 2;
 });
 delet3.addEventListener("click", () => {
   singleCard3.classList.add("hide");
+  total.innerHTML = allcards.children.length - 3;
 });
 delet4.addEventListener("click", () => {
   singleCard4.classList.add("hide");
+  total.innerHTML = allcards.children.length - 4;
 });
 delet5.addEventListener("click", () => {
   singleCard5.classList.add("hide");
+  total.innerHTML = allcards.children.length - 5;
 });
 delet6.addEventListener("click", () => {
   singleCard6.classList.add("hide");
+  total.innerHTML = allcards.children.length - 6;
 });
 delet7.addEventListener("click", () => {
   singleCard7.classList.add("hide");
+  total.innerHTML = allcards.children.length - 7;
 });
 delet8.addEventListener("click", () => {
   singleCard8.classList.add("hide");
+  total.innerHTML = allcards.children.length - 8;
 });
+
+
+
+
